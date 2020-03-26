@@ -9,4 +9,5 @@
     github_token: $GITHUB_TOKEN
     local_dir: dist
     on:
-      branch: gh-pages
+      branch: gh-pages,
+      edge: true
