@@ -5,9 +5,19 @@
       <router-link to="/about">About</router-link>
     </div> -->
     <notifications 
-      group="messages" 
+      group="messages-success" 
       position="top center" 
       classes="vue-notification success"
+    />
+    <notifications 
+      group="messages-error" 
+      position="top center" 
+      classes="vue-notification error"
+    />
+    <notifications 
+      group="messages-warning" 
+      position="top center" 
+      classes="vue-notification warning"
     />
     <router-view/>
   </div>

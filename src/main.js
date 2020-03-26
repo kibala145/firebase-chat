@@ -4,10 +4,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Notifications from 'vue-notification'
-import { rtdbPlugin } from 'vuefire'
 
 Vue.use(Notifications)
-Vue.use(rtdbPlugin)
 
 Vue.config.productionTip = false
 
@@ -16,3 +14,12 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+// Register a global custom directive called `v-focus`
+Vue.directive('focus', {
+  // When the bound element is inserted into the DOM...
+  inserted: function (el) {
+    // Focus the element
+    el.focus()
+  }
+})
