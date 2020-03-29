@@ -196,15 +196,15 @@ export default {
 
     const self = this
 
-    const nickname = localStorage.getItem('nickname')
+    // const nickname = localStorage.getItem('nickname')
 
-    if(nickname) {
-      this.nickname = nickname
-    } else {
-      const nicknameInput = prompt('Enter nickname', 'Anonymous') || 'Anonymous'
-      this.nickname = nicknameInput
-      localStorage.setItem('nickname', this.nickname)
-    }
+    // if(nickname) {
+    //   this.nickname = nickname
+    // } else {
+    //   const nicknameInput = prompt('Enter nickname', 'Anonymous') || 'Anonymous'
+    //   this.nickname = nicknameInput
+    //   localStorage.setItem('nickname', this.nickname)
+    // }
 
     const test = messagesRef.limitToLast(this.paginationSize).once('value', snapshot => {
       const messages = snapshot.val()
